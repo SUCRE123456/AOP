@@ -1,9 +1,17 @@
 package com.yedam.aop.advice;
 
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StopWatch;
 
+
+@Service
+@Aspect
 public class AroundAdvice {
+	
+	@Around("LogAdvice.allpointcut()")
 	public Object aroundLog(ProceedingJoinPoint pjp ) 
 			  throws Throwable {
 		//비지니스수행전 처리내용

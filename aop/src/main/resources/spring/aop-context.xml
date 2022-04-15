@@ -6,13 +6,13 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
 <aop:aspectj-autoproxy proxy-target-class="true"/> 
-
+<!-- 
 <bean id="logAdvice" class="com.yedam.aop.advice.LogAdvice"></bean>
 <bean id="afterAdvice" class="com.yedam.aop.advice.AfterAdvice"></bean>
 <bean id="aroundAdvice" class="com.yedam.aop.advice.AroundAdvice"></bean>
 
 <aop:config>
-	<aop:pointcut expression="execution(* com.yedam..*Impl.*(..))" id="allpointcut"/> <!--  *-> 모든걸 실행한다.   -->
+	<aop:pointcut expression="execution(* com.yedam..*Impl.*(..))" id="allpointcut"/>  *-> 모든걸 실행한다.  
 	
 	<aop:aspect ref="logAdvice">
 		<aop:before method="printLog" pointcut-ref="allpointcut"/>
@@ -24,6 +24,6 @@
 		<aop:around method="aroundLog" pointcut-ref="allpointcut" />
 	</aop:aspect>
 	
-</aop:config>
+</aop:config> -->
 
 </beans>
